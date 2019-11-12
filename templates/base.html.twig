@@ -14,32 +14,24 @@
     </head>
 
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark navbar-bg {{ app.session.flashbag.peek('success')|length > 0 ? '' : 'mb-5' }}">
-            <a style="margin-left: 75px;" class="navbar-brand space-brand" href="">The Space Bar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-bg">
+            <a style="margin-left: 75px;" class="navbar-brand space-brand" href="">Lynx Tools</a>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav mr-auto">
                      <li class="nav-item">
-                       <a style="color: #fff;" class="nav-link" href="#">Local Asteroids</a>
+                       <a style="color: #fff;" class="nav-link" href="#">Idle Heroes Event Calculator</a>
                      </li>
                      <li class="nav-item">
-                       <a style="color: #fff;" class="nav-link" href="#">Weather</a>
+                       <a style="color: #fff;" class="nav-link" href="#">MTG Cardmarket tool</a>
                      </li>
-                   </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
-                </form>
-
+                </ul>
             </div>
         </nav>
         {% block body %}{% endblock %}
 
         <footer class="footer">
             <div class="container text-center">
-                <span class="text-muted">Made with <i class="fa fa-heart" style="color: red;"></i> by the guys and gals at <a href="https://knpuniversity.com">KnpUniversity</a></span>
+                <span class="text-muted">Made with <i class="fa fa-heart" style="color: red;"></i> by Lynx</span>
             </div>
         </footer>
 
