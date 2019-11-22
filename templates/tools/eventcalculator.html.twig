@@ -1,1 +1,50 @@
 {% extends 'base.html.twig' %}
+
+
+{%block scripts %}
+    <script src="js/calculator.js"></script>
+{% endblock %}
+
+{% block title %}Idle Heroes Event Calculator{% endblock %}
+
+{%block body %}
+    <div class="container"> 
+        <div class="row justify-content-center">
+            <div class="col-sm-8">
+                <div id="titleblock" class="align-middle d-inline-block pl-3">
+                    <h2> Idle Heroes Campaign Event Calculator</h2>
+                    <h3> Current/Last event :</h3>
+                    <a href="fb link"><img src="images/event1.png" alt="Event Screenshot" class="screenshot rounded mx-auto d-block"></a>
+                </div>
+                <form name="calculator" class="align-middle m-4">
+                    <legend><b>Calculator</b></legend>
+                    <div class="form-inline">
+                        <input type="number" name="hours" class="form-control col-sm-2 ml-0 mr-1" min="0" required>  
+                        <label for="hours"> hours and  </label>
+                        <input type="number" name="minutes" class="form-control col-sm-2 mr-1 ml-1" min="0" max="59" required> 
+                        <label for="minutes"> minutes remaining in the event.</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="current">Current amount of currency: </label>
+                        <input type="number" name="current" class="form-control" min="0" required>
+                        <br>
+                        <label for="spent">Missed or spent currency: </label>
+                        <input type="number" name="spent" class="form-control" min="0" value="0" required>
+                        <br>
+                        <label for="bought">Amount of currency bought: </label>
+                        <input type="number" name="bought" class="form-control" min="0" value="0" required>
+                    </div>
+                    <button class="btn btn-primary" name="calculate" type="submit">Calculate</button>
+                </form>
+                <div class="align-middle ml-4 mr-4">
+                    <div id="prediction" class="">
+                    
+                    </div>
+                    <div id="rate">
+                   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

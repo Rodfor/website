@@ -11,18 +11,23 @@
             <link rel="stylesheet" href="{{ asset('css/font-awesome.css') }}">
             <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
         {% endblock %}
+        {% block scripts %} 
+        {% endblock %}
     </head>
 
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark navbar-bg">
-            <a style="margin-left: 75px;" class="navbar-brand space-brand" href="">Lynx Tools</a>
+            <a style="margin-left: 75px;" class="navbar-brand brand" href="">Lynx Tools</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav mr-auto p-2">
                      <li class="nav-item">
-                       <a style="color: #fff;" class="nav-link" href="#">Idle Heroes Event Calculator</a>
+                       <a style="color: #fff;" class="nav-link" href="{{ path('app_homepage') }}">Idle Heroes Event Calculator</a>
                      </li>
                      <li class="nav-item">
-                       <a style="color: #fff;" class="nav-link" href="#">MTG Cardmarket tool</a>
+                       <a style="color: #fff;" class="nav-link" href="{{ path('app_cardmarket') }}">MTG Cardmarket tool</a>
                      </li>
                 </ul>
             </div>
@@ -31,7 +36,7 @@
 
         <footer class="footer">
             <div class="container text-center">
-                <span class="text-muted">Made with <i class="fa fa-heart" style="color: red;"></i> by Lynx</span>
+                <span> Made with <i class="fa fa-heart" style="color: red;"></i> by Lynx</span>
             </div>
         </footer>
 
