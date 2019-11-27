@@ -1,7 +1,7 @@
 window.onload = function(){
 
-    let dEventStart = new Date(2019, 10, 18, 18); //Year, Month-1, Day, Hour, (Minute))
-    let dEventEnd = new Date(2019, 10, 26, 18); //Year, Month-1, Day, Hour, (Minute))
+    let dEventStart = new Date(2019, 10, 22, 1); //Year, Month-1, Day, Hour, (Minute))
+    let dEventEnd = new Date(2019, 10, 30, 1); //Year, Month-1, Day, Hour, (Minute))
     let dNow = new Date();
     let nHours = 0;
     let nMinutes = 0;
