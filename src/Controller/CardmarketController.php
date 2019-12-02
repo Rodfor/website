@@ -4,7 +4,7 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
-use App\Service\MkmApi;
+use App\Service\MkmArticle;
 
 
 class CardmarketController extends AbstractController
@@ -12,9 +12,9 @@ class CardmarketController extends AbstractController
     /**
      * @Route("/mkm", name="app_cardmarket")
      */
-    public function Cardmarket(MkmApi $api)
+    public function Cardmarket(MkmArticle $mkmArticle)
     {  
-        dd($api->get("https://sandbox.cardmarket.com/ws/v2.0/account"));
+        dd($mkmArticle->getProduct("360177"));
 
         return $this->render('tools/cardmarket.html.twig', [
 

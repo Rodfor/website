@@ -2,29 +2,9 @@
 
 namespace App\Service;
 
-use App\Service\Rest;
-
 class MkmApi
 {
-    private $rest;
-
-    public function __construct(Rest $rest)
-    {
-        $this->rest = $rest;
-    }
-
-    public function get($url)
-    {
-        $query = array();
-        $headers = $this->getAuth();
-
-        $response = $this->rest->send($url, $headers, $query, 'GET');
-
-
-        return $response;
-    }
-
-    public function getAuth()
+    public function getAuth(string $url)
     {
         /**
          * Declare and assign all needed variables for the request and the header
@@ -41,7 +21,6 @@ class MkmApi
          * @var version string OAuth version, currently 1.0
          */
         $method             = "GET";
-        $url                = "https://sandbox.cardmarket.com/ws/v2.0/account";
         $appToken           = "PZHbaqr1INFbmvJm";
         $appSecret          = "TRB7V9mtoVKjAzhY67ZIXzeSHlZ1AKSC";
         $accessToken        = "qY7ea9ji4qmgNZHUhmr8Qe1a5B03ifgO";

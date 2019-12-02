@@ -15,7 +15,6 @@ class Rest
 
     public function send(string $path, array $headers, array $query, string $verb)
     {
-
         switch ($verb) {
             case "GET":
                 $response = $this->request->get($path, $headers, $query);
